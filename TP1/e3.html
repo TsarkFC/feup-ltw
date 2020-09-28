@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+        <form method="get">
+            <p>
+                <label for="id_name">Name:</label>
+                <input type="text" id="id_name">
+            </p>
+            <p>
+                Age:
+                <input type="radio" name="id_age" id="radio1" value="&lt;18">
+                <label for="radio1">&lt;18</label>
+                <input type="radio" name="id_age" id="radio2" value="19-35">
+                <label for="radio2">19-35</label>
+                <input type="radio" name="id_age" id="radio3" value="36-48">
+                <label for="radio3">36-48</label>
+                <input type="radio" name="id_age" id="radio4" value="&gt;49">
+                <label for="radio4">&gt;49</label>
+            </p>
+            <p>
+                <label for="id_profession">Profession:</label>
+                <input type="text" id="id_profession">
+            </p>
+            <p>
+                <label for="country">Country:</label>
+                <select id="country">
+                    <option value="Portugal">Portugal</option>
+                    <option value="Spain">Spain</option>
+                    <option value="France">France</option>
+                    <option value="Italy">Italy</option>
+                </select>
+            </p>
+            <p>
+                Interests:
+                <input type="checkbox" id="football" value="Football">
+                <label for="football">Football</label>
+                <input type="checkbox" id="cycling" value="Cycling">
+                <label for="cycling">Cycling</label>
+                <input type="checkbox" id="reading" value="Reading">
+                <label for="reading">Reading</label>
+            </p>
+            <p>
+                <label for="id_how">How did you find about the site?</label><br>
+                <textarea id="id_how" rows="4" cols="50">
+                </textarea>
+            </p>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
