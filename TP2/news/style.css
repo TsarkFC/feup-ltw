@@ -3,6 +3,10 @@ body {
     margin-right: 150px;
 }
 
+body > header div a:first-of-type::after {
+    content: "   |   ";
+}
+
 body > header {
     background-color: #046DD5;
     padding: 1em;
@@ -43,7 +47,7 @@ footer a {
 
 body > footer {
     color: white;
-    padding: 0.2em;
+    margin-top: 0.5em;
     background-color: #2A2F33;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -107,4 +111,36 @@ body > footer {
 img {
     width: 100%;
     height: auto;
+}
+
+#news article p {
+    font-size: 1.1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#news article p:first-of-type::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.author:before {
+    content: "By ";
+}
+
+.comments::after {
+    content: " comments"
+}
+
+#news article {
+    position: relative;
+    margin-top: 1em;
+}
+
+#news article header h1 {
+    text-shadow: 5px 5px 5px black;
+    font-size: 20px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
 }
