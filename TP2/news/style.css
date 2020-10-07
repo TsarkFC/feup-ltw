@@ -144,3 +144,7 @@ img {
     top: 8px;
     left: 16px;
 }
+
+.hamburger {
+    position: absolute;
+}
