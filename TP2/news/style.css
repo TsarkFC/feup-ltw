@@ -68,27 +68,30 @@ body > footer {
 }
 
 #menu ul li {
-    border-top: 5px solid #E1493E;
+    border-color: #E1493E;
+    border-style: solid;
+    border-width: 0;
+    border-top-width: 5px;
 }
 
 #menu ul li+li { 
-    border-top: 5px solid #8ABA56;
+    border-color: #8ABA56;
 }
 
 #menu ul li+li+li {
-    border-top: 5px solid #5B4282;
+    border-color: #5B4282;
 }
 
 #menu ul li+li+li+li {
-    border-top: 5px solid #FF8932;
+    border-color: #FF8932;
 }
 
 #menu ul li+li+li+li+li {
-    border-top: 5px solid #19B6E9;
+    border-color: #19B6E9;
 }
 
 #menu ul li+li+li+li+li+li {
-   border-top: 5px solid #E84C8B;
+   border-color: #E84C8B;
 }
 
 #related {
@@ -143,8 +146,4 @@ img {
     position: absolute;
     top: 8px;
     left: 16px;
-}
-
-.hamburger {
-    position: absolute;
 }
