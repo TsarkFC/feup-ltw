@@ -65,13 +65,32 @@ body > footer {
 }
 
 #news footer {
-    text-align: center;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 60% 5% 15%;
     grid-template-rows: auto;
-    grid-template-areas: "author .";
+    grid-template-areas: "author tags date comments";
 }
 
 #news footer .author {
+    align-self: center;
+    text-align: left;
     grid-area: author;
+}
+
+#news footer .tags{
+    align-self: center;
+    text-align: right;
+    grid-area: tags;
+}
+
+#news footer .comments{
+    align-self: center;
+    text-align: right;
+    grid-area: comments;
+}
+
+#news footer .date{
+    align-self: center;
+    text-align: right;
+    grid-area: date;
 }
