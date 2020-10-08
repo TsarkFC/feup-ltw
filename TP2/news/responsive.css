@@ -68,8 +68,25 @@
         content: "\2715";
     }
 
+    /* WHITHOUT TRANSITION */
+    /*
     nav#menu input:not(:checked) ~ ul{
         display: none;
+    }
+    */
+
+    /* TRANSITION */
+    nav#menu ul > li {
+        opacity: 0;
+        height: 0;
+        transition: opacity 0.2s, height 0.1s, padding 0.2s;
+        padding: 0 0.5em 0 0.5em;
+    }
+
+    nav#menu input:checked ~ ul > li {
+        opacity: 1;
+        height: 100%;
+        padding: 0.5em;
     }
 
     section#news {
