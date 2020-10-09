@@ -1,5 +1,6 @@
 #register h1, #login h1{
     margin: 0;
+    margin-top: 1em;
     text-align: center;
 }
 
@@ -8,12 +9,11 @@ body > footer {
 }
 
 #register form, #login form {
-    display: block;
+    margin: 1em auto;
     background-color: white;
     width: 20em;
     height: 20em;
     padding: 1em 1em 0 1em;
-    margin: 1em 12em 0 12em;
 }
 
 #register form *, #login form * {
@@ -37,4 +37,21 @@ body > footer {
 
 #register form input[type=submit], #login form input[type=submit]{
     float: right;
+}
+
+@media (max-width: 60em){
+    #register, #login{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media (max-width: 30em){
+    #register, #login{
+        position: relative;
+        top: -1.2em;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: white;
+    }
 }
