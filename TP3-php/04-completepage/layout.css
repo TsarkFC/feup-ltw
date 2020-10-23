@@ -1,0 +1,99 @@
+body {
+    width: 60em;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "list sidebar"
+        "news sidebar"
+        "footer sidebar";
+    background-color: #EDEFF0;
+}
+
+body > header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "top top"
+        "bot right";
+}
+
+body > header > h1 {
+    grid-area: top;
+}
+
+body > header > h2 {
+    grid-area: bot;   
+}
+
+body > header > div {
+    grid-area: right;
+}
+
+body > footer {
+    grid-area: footer;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#related {
+    padding-left: 0;
+    padding-right: 0;
+    grid-area: sidebar;
+}
+
+#menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    grid-area: list;
+    background-color: white;
+}
+
+#menu ul li {
+    flex-grow: 1;
+}
+
+#news {
+    margin-right: 10px;
+    grid-area: news;
+}
+
+#news article {
+    background-color: white;
+    margin-top: 10px;
+}
+
+#news footer {
+    display: grid;
+    grid-template-columns: 20% 60% 5% 15%;
+    grid-template-rows: auto;
+    grid-template-areas: "author tags date comments";
+}
+
+#news footer .author {
+    align-self: center;
+    text-align: left;
+    grid-area: author;
+}
+
+#news footer .tags{
+    align-self: center;
+    text-align: right;
+    grid-area: tags;
+}
+
+#news footer .comments{
+    align-self: center;
+    text-align: right;
+    grid-area: comments;
+}
+
+#news footer .date{
+    align-self: center;
+    text-align: right;
+    grid-area: date;
+}

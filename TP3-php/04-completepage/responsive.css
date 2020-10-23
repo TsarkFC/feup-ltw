@@ -1,0 +1,123 @@
+@media (max-width: 60em){
+    #related {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    nav#menu {
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    section#news {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin: 0em;
+    }
+
+    body > footer {
+        grid-column-end: 3;
+    }
+}
+
+@media (max-width: 30em){
+    body > header > h2 {
+        display: none;
+    }
+
+    body > header > div {
+        grid-column-start: 1;
+    }
+
+    nav#menu ul {
+        position: relative;
+        top: -1.3em;
+        width: 60em;
+        flex-direction: column;
+        text-align: left;
+        background-color: #EDEFF0;
+    }
+
+    nav#menu ul li{
+        border-left-width: 5px;
+        border-top-width: 0;
+        padding-left: 1em;
+    }
+
+    nav#menu label.hamburger {
+        display: block;
+        position: relative;
+        top: -1.3em;
+        background-color: #2A2F33;
+        color: white;
+        padding: 1em;
+        margin-bottom: 0;
+        width: 58em;
+    }
+
+    nav#menu label.hamburger::before {
+        content: "\2630";
+    }
+
+    nav#menu input:checked + label.hamburger::before {
+        content: "\2715";
+    }
+
+    /* WHITHOUT TRANSITION */
+    /*
+    nav#menu input:not(:checked) ~ ul{
+        display: none;
+    }
+    */
+
+    /* TRANSITION */
+    nav#menu ul > li {
+        opacity: 0;
+        height: 0;
+        transition: opacity 0.2s, height 0.1s, padding 0.2s;
+        padding: 0 0.5em 0 0.5em;
+    }
+
+    nav#menu input:checked ~ ul > li {
+        opacity: 1;
+        height: 100%;
+        padding: 0.5em;
+    }
+
+    section#news {
+        position: relative;
+        top: -1.3em;
+        margin: 0;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #related {
+        display: none;
+    }
+
+    body > footer {
+        grid-column-end: 3;
+        width: 100%;
+    }
+
+    #news article header h1 {
+        position: static;
+        text-shadow: none;
+        padding: 1em 1em 0.5em 1em;
+        text-align: center;
+    }
+
+    #news article header h1 a {
+        color: black;
+    }
+
+    #news article {
+        margin-top: 0;
+    }
+}
