@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding-left: 40px;
+    background-image: url(stripe.png);
+    background-repeat: repeat-y;
+}
+
+body > div#header {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 1em;
+}
+
+body > div#header > h1 {
+    margin: 0;
+}
+
+body > div#header > h2 {
+    margin: 0;
+    font-size: 1em;
+}
+
+body > div#menu {
+    background-color: #333333;
+}
+
+body > div#menu > ul {
+    list-style-type: none;
+    padding: 10px 0 10px 0;
+    margin: 0;
+}
+
+body > div#menu > ul a {
+    color: #000000;
+    text-decoration: none;
+}
+
+body > div#menu li {
+    display: inline;
+    padding: 0 10px;
+    margin-left: 10px;
+    background-color: #FFFFFF;
+}
+
+div#content {
+    width: 800px;
+}
+
+div.news-item {
+    padding-left: 1em;
+}
+
+div.news-item > h3 {
+    font-size: 160%;
+    margin: 10px 0;
+}
+
+div.news-item .introduction{
+    font-style: italic;
+}
+
+div.news-item p a {
+    text-decoration: none;
+    color: #883333;
+}
+
+div.news-item > img {
+    float: right;
+}
+
+div.news-item > ul {
+    background-color: #333333;
+    list-style-type: none;
+    padding: 5px;
+}
+
+div.news-item > ul li{
+    display: inline;
+    padding-right: 10px;
+}
+
+div.news-item > ul a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer {
+    width: 800px;
+    text-align: right;
+}
