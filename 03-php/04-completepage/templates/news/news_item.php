@@ -1,11 +1,13 @@
 <section id="news">
   <article>
     <header>
-      <h1><a href="news_item.php"><?=$article['title']?></a></h1>
+      <h1><a href="news_item.php?id=<?=$article['id'] ?>"><?=$article['title']?></a></h1>
     </header>
     <img src="https://picsum.photos/600/300/" alt="">
     <p><?=$article['introduction'] ?></p>
-    <p><?=$article['text'] ?></p>
+		<p><?=$article['text'] ?></p>
+		<p><a href="edit_news.php?id=<?=$article['id'] ?>">Edit</a></p>
+		
     
     <?php include_once('templates/comments/list_comments.php') ?>
 
@@ -19,6 +21,5 @@
       <span class="date"><?=date('Y-m-d', $article['published']);?></span>
 			<a class="comments" href="news_item.php?id=<?=$article['id'] ?>#comments"><?=count($comments)?></a>
     </footer>
-
   </article>
 </section>

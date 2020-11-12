@@ -12,14 +12,18 @@ function getAllNews(){
   $stmt->execute();
 	return $stmt->fetchAll();
 }
-?>
 
-<?php
 function getNewsById($id){
 	global $db;
 
 	$stmt = $db->prepare('SELECT * FROM news JOIN users USING (username) WHERE id = ?');
 	$stmt->execute(array($id));
 	return $stmt->fetch();
+}
+
+function updateArticle(int $id, string $title, string $introduction, string $fulltext){
+	global $db;
+	$stmt = $db->prepare('UPDATE news SET title = ?, introduction = ?, fulltext = ? WHERE id = ?');
+	$stmt->execute(array($title, $introduction, $fulltext, $id));
 }
 ?>
