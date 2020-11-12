@@ -1,15 +1,7 @@
 <?php
-  $db = new PDO('sqlite:news.db');
-
-  $stmt = $db->prepare('SELECT news.*, users.*, COUNT(comments.id) AS comments
-  FROM news JOIN
-       users USING (username) LEFT JOIN
-       comments ON comments.news_id = news.id
-  GROUP BY news.id, users.username
-  ORDER BY published DESC');
-
-  $stmt->execute();
-  $articles = $stmt->fetchAll();
+  include_once('database/connection.php');
+  include_once('database/news.php');
+  $articles = getAllNews();
 ?>
 
 <!DOCTYPE html>
@@ -17,12 +9,12 @@
   <head>
     <title>Super Legit News</title>    
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="responsive.css" rel="stylesheet">
-    <link href="comments.css" rel="stylesheet">
-    <link href="forms.css" rel="stylesheet">
+    <meta name="css/viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/comments.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
   </head>
   <body>
     <header>

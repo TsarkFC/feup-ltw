@@ -1,13 +1,13 @@
 <?php
-    $db = new PDO('sqlite:news.db');
+  include_once('database/connection.php');
+  include_once('database/news.php');
+  include_once('database/comments.php');
 
-    $stmt = $db->prepare('SELECT * FROM news JOIN users USING (username) WHERE id = ?');
-    $stmt->execute(array($_GET['id']));
-    $article = $stmt->fetch();
+  if (!isset($_GET['id']))
+    die("No id!");
 
-    $stmt = $db->prepare('SELECT * FROM comments JOIN users USING (username) WHERE news_id = ?');
-    $stmt->execute(array($_GET['id']));
-    $comments = $stmt->fetchAll(); 
+  $article = getNewsById($_GET['id']);
+  $comments = getCommentsByNewId($_GET['id']);
 ?>
 
 <!DOCTYPE html>
@@ -16,11 +16,11 @@
     <title>Super Legit News</title>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="responsive.css" rel="stylesheet">
-    <link href="comments.css" rel="stylesheet">
-    <link href="forms.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/comments.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
   </head>
   <body>
     <header>
