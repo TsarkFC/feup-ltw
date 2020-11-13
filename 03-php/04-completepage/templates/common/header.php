@@ -19,7 +19,8 @@
           <a href="register.php">Register</a>
           <a href="login.php">Login</a>
         <?php } else {?>
-          <a href="action_logout.php">| Logout</a>
+          <a href="create_news.php"> Add article</a>
+          <a href="action_logout.php">Logout</a>
         <?php } ?>
       </div>
     </header>

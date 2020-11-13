@@ -8,7 +8,7 @@
     <p><?=$article['text'] ?></p>
     
     <?php if (!empty($_SESSION) && array_key_exists('username', $_SESSION)){ ?>
-      <p><a href="edit_news.php?id=<?=$article['id'] ?>">Edit</a></p>
+      <p><a href="edit_news.php?id=<?=$article['id'] ?>">Edit<a href="action_delete_news.php?id=<?=$article['id'] ?>"> Delete</a></p>
     <?php }?>
 		
     <?php include_once('templates/comments/list_comments.php') ?>
