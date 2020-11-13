@@ -1,4 +1,6 @@
 <?php
+  session_start();
+  
   include_once('database/connection.php');
   include_once('database/news.php');
   include_once('database/comments.php');

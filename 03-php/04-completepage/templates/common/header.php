@@ -15,8 +15,12 @@
       <h1><a href="list_news.php">Super Legit News</a></h1>
       <h2><a href="list_news.php">Where fake news are born!</a></h2>
       <div id="signup">
-        <a href="register.html">Register</a>
-        <a href="login.html">Login</a>
+        <?php if (empty($_SESSION) || !array_key_exists('username', $_SESSION)) {?>
+          <a href="register.php">Register</a>
+          <a href="login.php">Login</a>
+        <?php } else {?>
+          <a href="action_logout.php">| Logout</a>
+        <?php } ?>
       </div>
     </header>
     <nav id="menu">

@@ -5,10 +5,12 @@
     </header>
     <img src="https://picsum.photos/600/300/" alt="">
     <p><?=$article['introduction'] ?></p>
-		<p><?=$article['text'] ?></p>
-		<p><a href="edit_news.php?id=<?=$article['id'] ?>">Edit</a></p>
-		
+    <p><?=$article['text'] ?></p>
     
+    <?php if (!empty($_SESSION) && array_key_exists('username', $_SESSION)){ ?>
+      <p><a href="edit_news.php?id=<?=$article['id'] ?>">Edit</a></p>
+    <?php }?>
+		
     <?php include_once('templates/comments/list_comments.php') ?>
 
     <footer>
