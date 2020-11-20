@@ -480,10 +480,6 @@ body > header #signup {
   font-size: 1em;
 }
 
-#comments .id {
-  visibility: hidden;
-}
-
 form {
   background-color: white;
   color: black;
