@@ -22,7 +22,7 @@ function submitComment(event) {
 
     request.open('post', 'api_add_comment.php', true)
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-    request.send(encodeForAjax({id: newsitem_id, comment_id: comment_id, username: username, text: comment_text}))
+    request.send(encodeForAjax({newsitem_id: newsitem_id, comment_id: comment_id, username: username, comment_text: comment_text}))
 }
 
 function encodeForAjax(data) {
