@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Regular Expressions</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form action="myscript.php">
+      Username: <input type="text" pattern="^[a-zA-Z][\w]{3,8}[a-zA-Z]$" name="username" required="required"/>
+      Real name: <input type="text" pattern="\D" name="username" required="required"/>
+      <br/>
+      <input type="submit" value="Try"/>
+    </form>
+  </body>
+</html>
+ 

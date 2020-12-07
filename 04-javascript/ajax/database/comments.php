@@ -6,10 +6,10 @@
     return $stmt->fetchAll();
   }
 
-  function addComment($newsitem_id, $comment_id, $username, $comment_text) {
+  function addComment($newsitem_id, $username, $published , $comment_text) {
     global $db;
     $stmt = $db->prepare('INSERT INTO comments VALUES(NULL, ?, ?, ?, ?)');
-    $stmt->execute(array($newsitem_id, $comment_id, $username, $comment_text));
+    $stmt->execute(array($newsitem_id, $username, $published , $comment_text));
   }
 
   function fecthAfterComments($newsitem_id, $comment_id) {

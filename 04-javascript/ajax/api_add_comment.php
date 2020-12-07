@@ -8,7 +8,7 @@ $comment_id = $_POST['comment_id'];
 $username = $_POST['username'];
 $comment_text = $_POST['comment_text'];
 
-addComment($newsitem_id, $comment_id, $username, $comment_text);
+addComment($newsitem_id, $username, time(), $comment_text);
 
 echo json_encode(fecthAfterComments($newsitem_id, $comment_id));
 
